@@ -1,0 +1,66 @@
+.offline-indicator {
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.4rem 1rem;
+  z-index: 1001;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  max-width: 300px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.offline-indicator.offline {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.offline-indicator.sync-syncing {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.offline-indicator.sync-synced {
+  background: linear-gradient(135deg, #27ae60, #229954);
+}
+
+.offline-indicator.sync-error {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.offline-indicator.sync-pending {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.indicator-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.indicator-icon {
+  font-size: 1.25rem;
+  display: inline-block;
+}
+
+.indicator-icon.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.indicator-text {
+  flex: 1;
+  text-align: center;
+}
+

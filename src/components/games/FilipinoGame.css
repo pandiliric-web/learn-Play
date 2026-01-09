@@ -1,0 +1,290 @@
+/* ============================================
+   MODERN FILIPINO GAME PAGE DESIGN
+   ============================================ */
+
+.filipino-game-page {
+  min-height: 100vh;
+  background: #fafbfc;
+  position: relative;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.filipino-game-hero-section {
+  position: relative;
+  padding: 4rem 2rem 5rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, #4ECDC4 0%, #00b894 50%, #00a085 100%);
+}
+
+.filipino-game-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.filipino-game-hero-background .orb-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #4ECDC4, #00b894);
+  top: -100px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.filipino-game-hero-background .orb-2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #55efc4, #00b894);
+  top: 50%;
+  right: -50px;
+  animation-delay: -7s;
+}
+
+.filipino-game-hero-background .orb-3 {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  bottom: -100px;
+  left: 30%;
+  animation-delay: -14s;
+}
+
+.filipino-game-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.filipino-game-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.filipino-game-back-link:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   GAMES SECTION
+   ============================================ */
+
+.filipino-games-section {
+  padding: 3rem 2rem;
+  background: #fafbfc;
+}
+
+.filipino-games-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filipino-games-grid-new {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.filipino-game-card-new {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.filipino-game-card-new::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--game-color, #4ECDC4), var(--game-color, #4ECDC4)dd);
+}
+
+.filipino-game-card-new:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.filipino-card-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--game-color, #4ECDC4)15, var(--game-color, #4ECDC4)05);
+  margin-bottom: 0.5rem;
+}
+
+.filipino-card-icon-new {
+  font-size: 2.5rem;
+}
+
+.filipino-card-content-new {
+  flex: 1;
+}
+
+.filipino-card-title-new {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin: 0 0 0.75rem;
+}
+
+.filipino-card-description-new {
+  font-size: 1rem;
+  color: #5f6c7b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.filipino-card-action-new {
+  margin-top: auto;
+}
+
+.filipino-play-btn-new {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--game-color, #4ECDC4), var(--game-color, #4ECDC4)dd);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.filipino-play-btn-new:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Game Container */
+.filipino-game-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4ECDC4 0%, #00b894 100%);
+  padding: 2rem 1rem;
+}
+
+.filipino-game-header-new {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  color: white;
+}
+
+.filipino-game-header-actions-new {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filipino-header-nav-group-new {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filipino-back-btn-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filipino-back-btn-new:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.filipino-game-title-new {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 0 0 1.5rem;
+  color: white;
+}
+
+.filipino-game-stats-new {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.filipino-stat-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  min-width: 120px;
+}
+
+.filipino-stat-label-new {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.filipino-stat-value-new {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filipino-games-grid-new {
+    grid-template-columns: 1fr;
+  }
+  
+  .filipino-game-title-new {
+    font-size: 2rem;
+  }
+}

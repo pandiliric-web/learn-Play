@@ -1,0 +1,459 @@
+.buo-pangungusap-game {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 0;
+}
+
+.game-menu {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 25px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.game-icon-large {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.game-menu h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.game-description {
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.start-button {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.back-button {
+  background: transparent;
+  color: #6c757d;
+  border: 2px solid #6c757d;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #6c757d;
+  color: white;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.back-btn {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.game-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.3rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.reset-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.reset-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.game-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sentence-prompt {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.prompt-image {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.prompt-meaning {
+  font-size: 1.2rem;
+  color: #6c757d;
+  font-style: italic;
+  margin: 0;
+}
+
+.sentence-slots-container {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.sentence-slots-container h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.sentence-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.sentence-slot {
+  min-width: 120px;
+  min-height: 60px;
+  border: 3px dashed #cbd5e0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7fafc;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.sentence-slot.empty {
+  border-color: #cbd5e0;
+  background: #f7fafc;
+}
+
+.sentence-slot.filled {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #667eea15, #764ba215);
+  border-style: solid;
+}
+
+.sentence-slot.hovered {
+  border-color: #667eea;
+  background: #667eea20;
+  transform: scale(1.1);
+  border-width: 4px;
+}
+
+.sentence-slot.wrong {
+  border-color: #e53e3e;
+  background: #fed7d720;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+.slot-placeholder {
+  color: #a0aec0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.slot-word {
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slot-word:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.remove-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.slot-word:hover .remove-icon {
+  opacity: 1;
+}
+
+.words-container {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.words-container h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.words-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.word-button {
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  cursor: grab;
+}
+
+.word-button:active {
+  cursor: grabbing;
+}
+
+.word-button:hover:not(:disabled) {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.word-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.check-button {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+  padding: 1.2rem 2rem;
+  background: linear-gradient(135deg, #cbd5e0, #a0aec0);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.check-button.ready {
+  background: linear-gradient(45deg, #48bb78, #38a169);
+  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4);
+}
+
+.check-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(72, 187, 120, 0.5);
+}
+
+.check-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.celebration {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.celebration-star {
+  position: absolute;
+  font-size: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-title {
+    font-size: 2rem;
+  }
+
+  .game-menu {
+    padding: 2rem;
+  }
+
+  .game-menu h1 {
+    font-size: 2rem;
+  }
+
+  .sentence-slots {
+    gap: 0.8rem;
+  }
+
+  .sentence-slot {
+    min-width: 100px;
+    min-height: 50px;
+  }
+
+  .slot-word {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+
+  .word-button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .check-button {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .prompt-image {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-title {
+    font-size: 1.5rem;
+  }
+
+  .game-menu {
+    padding: 1.5rem;
+  }
+
+  .game-menu h1 {
+    font-size: 1.5rem;
+  }
+
+  .sentence-slots {
+    gap: 0.5rem;
+  }
+
+  .sentence-slot {
+    min-width: 80px;
+    min-height: 45px;
+  }
+
+  .slot-word {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .word-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .check-button {
+    font-size: 1rem;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .prompt-image {
+    font-size: 3rem;
+  }
+}

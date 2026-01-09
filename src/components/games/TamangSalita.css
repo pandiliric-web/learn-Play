@@ -1,0 +1,434 @@
+.tamang-salita-game {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+}
+
+/* Game Menu */
+.game-menu {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.game-menu h1 {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin-bottom: 20px;
+}
+
+.game-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.start-button {
+  font-size: 1.5rem;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 20px 0;
+  font-family: inherit;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: transform 0.2s;
+}
+
+.start-button:hover {
+  transform: scale(1.05);
+}
+
+.back-button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background: #f0f0f0;
+  color: #333;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: inherit;
+}
+
+/* Game Header */
+.game-header {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn {
+  color: #667eea;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #f0f0f0;
+}
+
+.game-title {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.game-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.reset-btn {
+  padding: 10px 20px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: inherit;
+  transition: background 0.3s;
+}
+
+.reset-btn:hover {
+  background: #ff5252;
+}
+
+/* Game Content */
+.game-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Image Prompt */
+.image-prompt {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.image-display {
+  font-size: 8rem;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.prompt-text {
+  font-size: 2rem;
+  color: #667eea;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.text-input-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.word-input {
+  width: 100%;
+  font-size: 2rem;
+  padding: 20px;
+  border: 4px solid #667eea;
+  border-radius: 15px;
+  text-align: center;
+  font-family: inherit;
+  letter-spacing: 0.2em;
+  text-transform: lowercase;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+  transition: border-color 0.3s;
+}
+
+.word-input:focus {
+  outline: none;
+  border-color: #764ba2;
+}
+
+.word-input.shaking {
+  border-color: #ff6b6b;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.word-input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Letter Buttons */
+.letter-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.letter-button {
+  font-size: 1.5rem;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: inherit;
+  transition: transform 0.2s, opacity 0.2s;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+.letter-button:hover:not(:disabled) {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+}
+
+.letter-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.backspace-button {
+  font-size: 1.8rem;
+  padding: 15px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: inherit;
+  grid-column: span 2;
+  transition: background 0.3s;
+  box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
+}
+
+.backspace-button:hover:not(:disabled) {
+  background: #ff5252;
+}
+
+.backspace-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Submit Button */
+.submit-button {
+  font-size: 1.8rem;
+  padding: 20px 60px;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: inherit;
+  box-shadow: 0 4px 20px rgba(17, 153, 142, 0.4);
+  transition: transform 0.2s;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(17, 153, 142, 0.5);
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
+/* Feedback Message */
+.feedback-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.feedback-message.wrong {
+  background: #ffe0e0;
+  color: #ff6b6b;
+  border: 3px solid #ff6b6b;
+}
+
+/* Star Animation */
+.star-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.star {
+  position: absolute;
+  font-size: 4rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-menu {
+    margin: 50px 20px;
+    padding: 30px 20px;
+  }
+
+  .game-menu h1 {
+    font-size: 2rem;
+  }
+
+  .game-description {
+    font-size: 1rem;
+  }
+
+  .game-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .game-title {
+    font-size: 1.5rem;
+  }
+
+  .game-content {
+    padding: 20px;
+  }
+
+  .image-display {
+    font-size: 5rem;
+  }
+
+  .prompt-text {
+    font-size: 1.5rem;
+  }
+
+  .word-input {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .letter-buttons-container {
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 8px;
+  }
+
+  .letter-button {
+    font-size: 1.2rem;
+    padding: 12px;
+  }
+
+  .backspace-button {
+    font-size: 1.5rem;
+    padding: 12px;
+  }
+
+  .submit-button {
+    font-size: 1.5rem;
+    padding: 15px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tamang-salita-game {
+    padding: 10px;
+  }
+
+  .letter-buttons-container {
+    grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+    gap: 6px;
+  }
+
+  .letter-button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .image-display {
+    font-size: 4rem;
+  }
+
+  .prompt-text {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,472 @@
+/* ============================================
+   MODERN MATH GAME PAGE DESIGN
+   ============================================ */
+
+.math-game-page {
+  min-height: 100vh;
+  background: #fafbfc;
+  position: relative;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.math-game-hero-section {
+  position: relative;
+  padding: 4rem 2rem 5rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, #FF6B6B 0%, #ee5a6f 50%, #e63950 100%);
+}
+
+.math-game-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: float 20s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #FF6B6B, #ee5a6f);
+  top: -100px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #ff9f43, #ff6b6b);
+  top: 50%;
+  right: -50px;
+  animation-delay: -7s;
+}
+
+.orb-3 {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, #feca57, #ff9ff3);
+  bottom: -100px;
+  left: 30%;
+  animation-delay: -14s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.math-game-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text-wrapper {
+  text-align: center;
+  color: white;
+}
+
+.math-game-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.math-game-back-link:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.start-pill-new {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-title-new {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0.5rem 0 1rem;
+  line-height: 1.2;
+  color: white;
+}
+
+.highlight-new {
+  background: linear-gradient(135deg, #fff, #ffeaa7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle-new {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   GAMES SECTION
+   ============================================ */
+
+.math-games-section {
+  padding: 3rem 2rem;
+  background: #fafbfc;
+}
+
+.math-games-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.math-games-grid-new {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.math-game-card-new {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.math-game-card-new::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--math-card-color, #FF6B6B), var(--math-card-color, #FF6B6B)dd);
+}
+
+.math-game-card-new:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.card-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--math-card-color, #FF6B6B)15, var(--math-card-color, #FF6B6B)05);
+  margin-bottom: 0.5rem;
+}
+
+.card-icon-new {
+  font-size: 2.5rem;
+}
+
+.card-content-new {
+  flex: 1;
+}
+
+.card-title-new {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin: 0 0 0.75rem;
+}
+
+.card-description-new {
+  font-size: 1rem;
+  color: #5f6c7b;
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+.card-meta-new {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.meta-tag {
+  padding: 0.4rem 0.9rem;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.card-skills-new {
+  margin-bottom: 1.25rem;
+}
+
+.skills-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4c5a67;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  padding: 0.35rem 0.8rem;
+  background: #f1f3f5;
+  color: #495057;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.card-features-new {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.card-features-new li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #4c5a67;
+  font-size: 0.9rem;
+}
+
+.feature-icon {
+  color: var(--math-card-color, #FF6B6B);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.card-action-new {
+  margin-top: auto;
+}
+
+.start-game-btn-new {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--math-card-color, #FF6B6B), var(--math-card-color, #FF6B6B)dd);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.start-game-btn-new:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   GAME CONTAINER (When playing)
+   ============================================ */
+
+.math-game-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FF6B6B 0%, #ee5a6f 100%);
+  padding: 2rem 1rem;
+}
+
+.game-header-new {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  color: white;
+}
+
+.game-header-actions-new {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-nav-group-new {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.back-btn-new,
+.back-menu-btn-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.back-btn-new:hover,
+.back-menu-btn-new:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.music-toggle-btn-new {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-toggle-btn-new:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.game-title-new {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 0 0 1.5rem;
+  color: white;
+}
+
+.game-stats-new {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.stat-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  min-width: 120px;
+}
+
+.stat-label-new {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.stat-value-new {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+}
+
+.progress-new {
+  min-width: 200px;
+}
+
+.progress-bar-new {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-fill-new {
+  height: 100%;
+  background: linear-gradient(90deg, #fff, #ffeaa7);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title-new {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle-new {
+    font-size: 1.1rem;
+  }
+  
+  .math-games-grid-new {
+    grid-template-columns: 1fr;
+  }
+  
+  .game-title-new {
+    font-size: 2rem;
+  }
+}

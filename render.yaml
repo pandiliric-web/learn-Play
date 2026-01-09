@@ -1,0 +1,58 @@
+services:
+  # Backend API Service (Express)
+  - type: web
+    name: learnplay-backend
+    env: node
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        fromService:
+          type: web
+          name: learnplay-backend
+          property: port
+      - key: CLIENT_ORIGIN
+        fromService:
+          type: web
+          name: learnplay-frontend
+          property: host
+          transform: "https://${host}"
+      - key: MONGO_URI
+        sync: false  # You'll set this manually in Render dashboard
+      - key: JWT_SECRET
+        generateValue: true  # Render will generate a secure random value
+      - key: EMAIL_USER
+        sync: false  # Set manually
+      - key: EMAIL_PASS
+        sync: false  # Set manually
+      - key: EMAIL_HOST
+        value: smtp.gmail.com
+      - key: EMAIL_PORT
+        value: "587"
+      - key: EMAIL_FROM_NAME
+        value: LearnPlay
+
+  # Frontend Static Site (React)
+  - type: web
+    name: learnplay-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    envVars:
+      - key: REACT_APP_API_URL
+        fromService:
+          type: web
+          name: learnplay-backend
+          property: host
+          transform: "https://${host}/api"
+
+# Optional: MongoDB Database (if you want to use Render's MongoDB instead of Atlas)
+# Uncomment the following if you want to use Render's MongoDB:
+# databases:
+#   - name: learnplay-db
+#     plan: free
+#     databaseName: learnplay
+#     user: learnplay_user
