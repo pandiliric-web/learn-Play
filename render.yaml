@@ -39,7 +39,7 @@ services:
   - type: web
     name: learnplay-frontend
     env: static
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --legacy-peer-deps && npm run build
     staticPublishPath: ./build
     envVars:
       - key: REACT_APP_API_URL
@@ -56,3 +56,4 @@ services:
 #     plan: free
 #     databaseName: learnplay
 #     user: learnplay_user
+
