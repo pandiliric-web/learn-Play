@@ -44,9 +44,7 @@ app.use(cors({ origin: CLIENT_ORIGIN, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-app.get('/api/health', (req, res) => {
-  console.log('[HEALTH] Health check requested');
-  res.json({ status: 'ok' });
+app.get('/api/health', (_req, res) => res.json({ status: 'ok' }));
 
 // Test email endpoint
 app.post('/api/test-email', async (req, res) => {
